@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import CustomSelect from "@/components/CustomSelect";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,23 @@ export default function Hero() {
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  const roleOptions = [
+    { value: "creator", label: "Content Creator" },
+    { value: "founder", label: "Startup Founder" },
+    { value: "agency", label: "Agency" },
+    { value: "marketing", label: "Marketing Team" },
+    { value: "other", label: "Other" },
+  ];
+
+  const platformOptions = [
+    { value: "linkedin", label: "LinkedIn" },
+    { value: "x", label: "X (Twitter)" },
+    { value: "instagram", label: "Instagram" },
+    { value: "threads", label: "Threads" },
+    { value: "medium", label: "Medium" },
+    { value: "multiple", label: "Multiple" },
+  ];
 
   return (
     <section
@@ -156,45 +174,28 @@ export default function Hero() {
                       <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
                         Your Role
                       </label>
-                      <select
+                      <CustomSelect
                         name="role"
                         required
                         value={formData.role}
                         onChange={handleChange}
-                        className="form-select"
-                      >
-                        <option value="" disabled>
-                          Select your role
-                        </option>
-                        <option value="creator">Content Creator</option>
-                        <option value="founder">Startup Founder</option>
-                        <option value="agency">Agency</option>
-                        <option value="marketing">Marketing Team</option>
-                        <option value="other">Other</option>
-                      </select>
+                        options={roleOptions}
+                        placeholder="Select your role"
+                      />
                     </div>
 
                     <div>
                       <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
                         Primary Platform
                       </label>
-                      <select
+                      <CustomSelect
                         name="platform"
                         required
                         value={formData.platform}
                         onChange={handleChange}
-                        className="form-select"
-                      >
-                        <option value="" disabled>
-                          Choose your main platform
-                        </option>
-                        <option value="linkedin">LinkedIn</option>
-                        <option value="x">X (Twitter)</option>
-                        <option value="instagram">Instagram</option>
-                        <option value="threads">Threads</option>
-                        <option value="medium">Medium</option>
-                        <option value="multiple">Multiple</option>
-                      </select>
+                        options={platformOptions}
+                        placeholder="Choose your main platform"
+                      />
                     </div>
 
                     <button type="submit" className="btn-primary w-full mt-2">

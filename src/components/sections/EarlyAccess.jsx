@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import CustomSelect from "@/components/CustomSelect";
 
 export default function EarlyAccess() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,14 @@ export default function EarlyAccess() {
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  const roleOptions = [
+    { value: "creator", label: "Content Creator" },
+    { value: "founder", label: "Startup Founder" },
+    { value: "agency", label: "Agency" },
+    { value: "marketing", label: "Marketing Team" },
+    { value: "other", label: "Other" },
+  ];
 
   return (
     <section
@@ -67,22 +76,14 @@ export default function EarlyAccess() {
                   <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
                     Your Role *
                   </label>
-                  <select
+                  <CustomSelect
                     name="role"
                     required
                     value={formData.role}
                     onChange={handleChange}
-                    className="form-select"
-                  >
-                    <option value="" disabled>
-                      Select your role
-                    </option>
-                    <option value="creator">Content Creator</option>
-                    <option value="founder">Startup Founder</option>
-                    <option value="agency">Agency</option>
-                    <option value="marketing">Marketing Team</option>
-                    <option value="other">Other</option>
-                  </select>
+                    options={roleOptions}
+                    placeholder="Select your role"
+                  />
                 </div>
 
                 <div>
