@@ -1,42 +1,4 @@
-"use client";
-import { useState } from "react";
-import CustomSelect from "@/components/CustomSelect";
-
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    role: "",
-    platform: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const roleOptions = [
-    { value: "creator", label: "Content Creator" },
-    { value: "founder", label: "Startup Founder" },
-    { value: "agency", label: "Agency" },
-    { value: "marketing", label: "Marketing Team" },
-    { value: "other", label: "Other" },
-  ];
-
-  const platformOptions = [
-    { value: "linkedin", label: "LinkedIn" },
-    { value: "x", label: "X (Twitter)" },
-    { value: "instagram", label: "Instagram" },
-    { value: "threads", label: "Threads" },
-    { value: "medium", label: "Medium" },
-    { value: "multiple", label: "Multiple" },
-  ];
-
   return (
     <section
       id="hero"
@@ -62,7 +24,7 @@ export default function Hero() {
           <div>
             <div className="badge mb-6 animate-fade-in-up">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Coming Soon — Join the Waitlist
+              Now Live — Get Started Free
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 animate-fade-in-up delay-100">
@@ -81,8 +43,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10 animate-fade-in-up delay-300">
-              <a href="#early-access" className="btn-primary">
-                Join the Waitlist
+              <a
+                href="https://app.contentelevatr.com/sign-up"
+                className="btn-primary"
+              >
+                Get Started Free
                 <svg
                   width="16"
                   height="16"
@@ -120,132 +85,73 @@ export default function Hero() {
               </div>
               <p className="text-sm text-[#8888aa]">
                 <span className="text-white font-medium">240+</span> creators
-                already on the waitlist
+                already using ContentElevatr
               </p>
             </div>
           </div>
 
-          {/* Right — Signup Form */}
+          {/* Right — CTA Card */}
           <div className="animate-fade-in-up delay-200">
             <div className="glass-card p-8 relative">
               <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-violet-500/20 via-transparent to-cyan-500/20 pointer-events-none" />
 
-              {!submitted ? (
-                <>
-                  <h3 className="text-xl font-semibold text-white mb-1">
-                    Get Early Access
-                  </h3>
-                  <p className="text-sm text-[#8888aa] mb-6">
-                    Be among the first to try ContentElevatr. No spam, ever.
-                  </p>
+              <div className="text-center py-4">
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-white/[0.08] flex items-center justify-center mx-auto mb-6">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#a78bfa"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
-                        Your Name
-                      </label>
-                      <input
-                        name="name"
-                        type="text"
-                        required
-                        placeholder="Jane Doe"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="form-input"
-                      />
-                    </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Ready to elevate your content?
+                </h3>
+                <p className="text-sm text-[#8888aa] mb-8 max-w-sm mx-auto">
+                  Create your free account and start publishing across all your
+                  platforms in minutes. No credit card required.
+                </p>
 
-                    <div>
-                      <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
-                        Email Address
-                      </label>
-                      <input
-                        name="email"
-                        type="email"
-                        required
-                        placeholder="jane@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="form-input"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
-                        Your Role
-                      </label>
-                      <CustomSelect
-                        name="role"
-                        required
-                        value={formData.role}
-                        onChange={handleChange}
-                        options={roleOptions}
-                        placeholder="Select your role"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-[#8888aa] mb-1.5">
-                        Primary Platform
-                      </label>
-                      <CustomSelect
-                        name="platform"
-                        required
-                        value={formData.platform}
-                        onChange={handleChange}
-                        options={platformOptions}
-                        placeholder="Choose your main platform"
-                      />
-                    </div>
-
-                    <button type="submit" className="btn-primary w-full mt-2">
-                      Join the Waitlist
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </button>
-
-                    <p className="text-xs text-center text-[#666680]">
-                      🔒 Free early access for waitlist members. No credit card
-                      required.
-                    </p>
-                  </form>
-                </>
-              ) : (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
+                <div className="space-y-3 max-w-xs mx-auto">
+                  <a
+                    href="https://app.contentelevatr.com/sign-up"
+                    className="btn-primary w-full"
+                  >
+                    Sign Up Free
                     <svg
-                      width="32"
-                      height="32"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#22c55e"
+                      stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M20 6L9 17l-5-5" />
+                      <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    You&apos;re on the list! 🎉
-                  </h3>
-                  <p className="text-sm text-[#8888aa]">
-                    We&apos;ll notify you as soon as ContentElevatr is ready.
-                    <br />
-                    Check your inbox for a confirmation email.
-                  </p>
+                  </a>
+
+                  <a
+                    href="https://app.contentelevatr.com/sign-in"
+                    className="btn-secondary w-full"
+                  >
+                    Already have an account? Sign In
+                  </a>
                 </div>
-              )}
+
+                <p className="text-xs text-[#666680] mt-6">
+                  🔒 Free to get started. No credit card required.
+                </p>
+              </div>
             </div>
           </div>
         </div>

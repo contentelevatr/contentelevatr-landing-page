@@ -9,8 +9,7 @@ export default function PricingTeaser() {
             <span className="gradient-text">No surprises.</span>
           </h2>
           <p className="text-[#8888aa] leading-relaxed mb-10">
-            We&apos;re finalizing our plans. Waitlist members get free early
-            access — no credit card required.
+            Get started free &mdash; no credit card required.
           </p>
 
           <div className="glass-card p-10 max-w-lg mx-auto relative">
@@ -32,12 +31,11 @@ export default function PricingTeaser() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-2">
-              Free Early Access
+              Free to Get Started
             </h3>
             <p className="text-sm text-[#8888aa] mb-6">
-              Join the waitlist today and lock in free access to ContentElevatr
-              when we launch. Early supporters get priority access and exclusive
-              perks.
+              Sign up today and get free access to ContentElevatr. Early
+              supporters get priority support and exclusive perks.
             </p>
 
             <div className="space-y-3 mb-8 text-left max-w-xs mx-auto">
@@ -65,8 +63,8 @@ export default function PricingTeaser() {
               ))}
             </div>
 
-            <a href="#early-access" className="btn-primary">
-              Join the Waitlist — It&apos;s Free
+            <a href="https://app.contentelevatr.com/sign-up" className="btn-primary">
+              Sign Up Free
             </a>
           </div>
         </div>

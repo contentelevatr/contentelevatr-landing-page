@@ -58,8 +58,17 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="#early-access" className="btn-primary text-sm py-2.5 px-6">
-            Join Waitlist
+          <a
+            href="https://app.contentelevatr.com/sign-in"
+            className="text-sm text-[#8888aa] hover:text-white transition-colors duration-200"
+          >
+            Sign In
+          </a>
+          <a
+            href="https://app.contentelevatr.com/sign-up"
+            className="btn-primary text-sm py-2.5 px-6"
+          >
+            Sign Up Free
           </a>
         </div>
 
@@ -101,11 +110,18 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#early-access"
+              href="https://app.contentelevatr.com/sign-in"
+              onClick={() => setMobileOpen(false)}
+              className="text-sm text-[#8888aa] hover:text-white transition-colors py-2"
+            >
+              Sign In
+            </a>
+            <a
+              href="https://app.contentelevatr.com/sign-up"
               onClick={() => setMobileOpen(false)}
               className="btn-primary text-sm py-2.5 px-6 text-center"
             >
-              Join Waitlist
+              Sign Up Free
             </a>
           </div>
         </div>

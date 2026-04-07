@@ -8,7 +8,7 @@ export default function FinalCTA() {
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <div className="badge mb-6 mx-auto">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Limited Early Access
+          Get Started Today
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
@@ -17,16 +17,16 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-lg text-[#8888aa] max-w-xl mx-auto mb-8 leading-relaxed">
-          Join the waitlist now and be the first to experience the future of
-          social media management. Free early access for all waitlist members.
+          Sign up now and experience the future of social media management.
+          Free to get started — no credit card required.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#early-access"
+            href="https://app.contentelevatr.com/sign-up"
             className="btn-primary text-base py-4 px-8 animate-pulse-glow"
           >
-            Get Early Access
+            Sign Up Free
             <svg
               width="18"
               height="18"
@@ -46,7 +46,7 @@ export default function FinalCTA() {
         </div>
 
         <p className="text-xs text-[#666680] mt-6">
-          No credit card required · Free forever for early adopters · Cancel
+          No credit card required · Free to get started · Cancel
           anytime
         </p>
       </div>

@@ -9,7 +9,7 @@ const inter = Inter({
 export const metadata = {
   title: "ContentElevatr — Create Once. Publish Everywhere. Grow Faster.",
   description:
-    "The social media productivity platform that helps creators, founders, and teams turn one piece of content into optimized posts across every platform. Join the waitlist for early access.",
+    "The social media productivity platform that helps creators, founders, and teams turn one piece of content into optimized posts across every platform. Sign up free to get started.",
   keywords: [
     "social media management",
     "content repurposing",
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "ContentElevatr — Create Once. Publish Everywhere.",
     description:
-      "Turn a single idea into optimized posts across LinkedIn, X, Instagram, Threads & Medium. Join the waitlist.",
+      "Turn a single idea into optimized posts across LinkedIn, X, Instagram, Threads & Medium. Sign up free today.",
     type: "website",
   },
 };

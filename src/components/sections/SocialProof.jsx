@@ -77,7 +77,7 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Waitlist counter */}
+        {/* User counter */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/[0.03] border border-white/[0.08]">
             <div className="flex -space-x-2">
@@ -92,7 +92,7 @@ export default function SocialProof() {
             </div>
             <p className="text-sm text-[#8888aa]">
               Join <span className="text-white font-semibold">240+</span>{" "}
-              creators on the waitlist
+              creators using ContentElevatr
             </p>
           </div>
         </div>

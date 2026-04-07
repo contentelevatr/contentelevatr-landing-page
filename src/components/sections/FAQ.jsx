@@ -3,9 +3,9 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "When will ContentElevatr launch?",
+    question: "Is ContentElevatr available now?",
     answer:
-      "We're currently in active development and targeting a launch within the next few months. Waitlist members will get early access before the public launch. Join the waitlist to be first in line!",
+      "Yes! ContentElevatr is live and ready for you. Sign up for a free account and start creating optimized content across all your platforms today.",
   },
   {
     question: "Which platforms will be supported?",
@@ -23,9 +23,9 @@ const faqs = [
       "Absolutely. We're building multi-workspace support specifically for agencies. You'll be able to manage multiple client accounts, each with their own content calendar, analytics, and engagement dashboard.",
   },
   {
-    question: "Will there be a free plan?",
+    question: "Is there a free plan?",
     answer:
-      "Yes! We plan to offer a generous free tier so everyone can get started. Waitlist members will receive exclusive early-adopter pricing and perks that won't be available after public launch.",
+      "Yes! We offer a generous free tier so everyone can get started. Sign up today and explore the full platform at no cost — no credit card required.",
   },
   {
     question: "How does the AI content optimization work?",

@@ -135,7 +135,7 @@ export default function HowItWorks() {
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/[0.08] text-sm text-[#8888aa]">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-            These features are currently being built. Join the waitlist to be first in line.
+            These features are available now. Sign up free and start creating today.
           </div>
         </div>
       </div>
