@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-3">
-              {["About", "Blog", "Careers", "Contact"].map((item) => (
+              {["About", "Blog", "Careers"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -55,6 +55,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="mailto:contact@contentelevatr.com"
+                  className="text-sm text-[#8888aa] hover:text-white transition-colors"
+                >
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
         </div>
